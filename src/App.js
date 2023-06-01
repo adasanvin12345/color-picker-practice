@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Colors from './components/colors/colors';
+import Grid from './components/grid/grid';
 import './App.css';
 
 function App() {
+
+  const COLORS = ['blue', 'green', 'gold', 'red', 'pink', 'cyan'];
+
+  const [colorChoosen, setColorChoosen] = useState("white");
+
+  const handleColorChoosen = (color) => {
+    setColorChoosen(color);
+  }
+  console.log(colorChoosen)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div>
+        <Colors handleColorChoosen={handleColorChoosen} listOfColors={COLORS} />
+        {/* <Colors setColorChoosen={setColorChoosen} /> */}
+
+        <Grid colorChoosen={colorChoosen} listOfColors={COLORS} />
+      </div>
+
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.gridBox {
+    border: 1px solid black;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    box-sizing: border-box;
+}

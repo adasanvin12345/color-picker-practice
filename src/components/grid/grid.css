@@ -1,0 +1,29 @@
+.grid_outer_container {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.grid_inner_container {
+    width: calc(20px * 20);
+    height: calc(20px * 20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+    flex-wrap: wrap;
+}
+
+.features_outer_container {
+    width: calc(20px * 20);
+    height: calc(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+    flex-wrap: wrap;
+}
