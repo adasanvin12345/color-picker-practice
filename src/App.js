@@ -24,7 +24,7 @@ function App() {
 
         <Grid colorChoosen={colorChoosen} listOfColors={COLORS} />
       </div>
-
+      <h4>Also check by reloading...</h4>
     </div>
   );
 }
