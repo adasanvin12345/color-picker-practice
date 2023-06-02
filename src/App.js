@@ -12,9 +12,12 @@ function App() {
   const handleColorChoosen = (color) => {
     setColorChoosen(color);
   }
+
   console.log(colorChoosen)
   return (
     <div className="app">
+      <h1>Color-Picker</h1>
+      <h4>Please select a color and start filling the cells...</h4>
       <div>
         <Colors handleColorChoosen={handleColorChoosen} listOfColors={COLORS} />
         {/* <Colors setColorChoosen={setColorChoosen} /> */}

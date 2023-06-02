@@ -16,16 +16,6 @@ function Grid({ colorChoosen, listOfColors }) {
         setBoxes(Array(400).fill(0));
     }, [])
 
-    // useEffect(() => {
-    //     localStorage.setItem("movesUndo", JSON.stringify(movesUndo));
-    // }, [movesUndo])
-    // useEffect(() => {
-    //     localStorage.setItem("movesRedo", JSON.stringify(movesRedo));
-    // }, [movesRedo])
-    // useEffect(() => {
-    //     localStorage.setItem("boxColors", JSON.stringify(boxColors));
-    // }, [boxColors])
-
     return (
         <div className='grid_outer_container'>
             <div className='grid_inner_container'>

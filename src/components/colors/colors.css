@@ -2,7 +2,8 @@
     width: 50vw;
     height: 20vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
 

@@ -1,18 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./gridBox.css";
 
-function GridBox({ id, colorChoosen, listOfColors, boxColors, setBoxColors, movesUndo, movesRedo, setMovesUndo, setMovesRedo, fillColor, setFillColor, reset }) {
+function GridBox({ id, colorChoosen, listOfColors, boxColors, setBoxColors, movesUndo, movesRedo, setMovesUndo, setMovesRedo, fillColor, setFillColor }) {
 
     const [isHovered, setIsHovered] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const [gridBoxStyle, setGridBoxStyle] = useState({});
-
-
-
-
-    // useEffect(() => {
-    //     setGridBoxStyle({ backgroundColor: boxColors[id] !== -1 ? listOfColors[boxColors[id]] : "white" });
-    // }, []);
 
     useEffect(() => {
         setGridBoxStyle({ backgroundColor: fillColor[0] !== -1 && fillColor[0] === id ? listOfColors[boxColors[id]] : (boxColors[id] !== -1) ? gridBoxStyle : "white" });
@@ -22,12 +15,6 @@ function GridBox({ id, colorChoosen, listOfColors, boxColors, setBoxColors, move
         setGridBoxStyle({ backgroundColor: isHovered ? colorChoosen : (boxColors[id] !== -1 ? listOfColors[boxColors[id]] : "white") });
     }, [isHovered, isClicked])
 
-
-
-
-    // useEffect(() => {
-    //     setGridBoxStyle({ backgroundColor: "white" });
-    // }, [reset]);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
